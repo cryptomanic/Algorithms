@@ -1,0 +1,18 @@
+# curve(x^2, 1, 10, xlab = "x", ylab = "f(x)", col = "green")
+# curve(2^x, 1, 10, xlab = "x", ylab = "f(x)", add = T, col = "red")
+# abline(v = 2, col = "blue")
+# abline(v = 4, col = "blue")
+# text(6, 80, "2^x")
+# text(7, 55, "x^2")
+
+#   curve(log(100, x), 50, 300, xlab = "x", ylab = "f(x)", col = "green")
+#   curve(log(x, 100), 50, 300, xlab = "x", ylab = "f(x)", add = T, col = "red")
+#   abline(v = 100, col = "blue")
+#   text(200, 0.9, "logx(100)")
+#   text(150, 1.1, "log100(x)")
+
+#   curve(3^x, 10, 15, xlab = "x", ylab = "f(x)", col = "green")
+#   curve(1000*(x^3), 10, 15, xlab = "x", ylab = "f(x)", add = T, col = "red")
+#   abline(v = 13.4, col = "blue")
+#   text(14.5, 3^14.5, "3^x")
+#   text(11, 1000*(11^3), "1000*x^3")
