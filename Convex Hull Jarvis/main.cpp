@@ -1,5 +1,6 @@
 #include <iostream>
 #include <vector>
+#include <fstream>
 
 using namespace std;
 
@@ -53,6 +54,11 @@ int orientation(Point& p1, Point& p2, Point& p3) {
 
 // naive method for finding convex hull
 void JarvisMethod(vector<Point> & A) {
+
+        ofstream outfile;
+        outfile.open("selectedpoints.txt");
+        outfile << "xcoor" << " " <<"ycoor" << endl;
+
         // number of points in the plane
         int N = A.size();
         // x coordinate of left most point
@@ -103,12 +109,17 @@ void JarvisMethod(vector<Point> & A) {
         cout<<endl;
         for(int i = 0; i < hull.size();i++) {
             cout<<"("<<hull[i].getX()<<","<<hull[i].getY()<<") ";
+            outfile << hull[i].getX() << " " << hull[i].getY() << endl;
         }
 }
 
 int main()
 {
     int N, x, y;
+
+    ofstream outfile;
+    outfile.open("allpoints.txt");
+    outfile << "xcoor" << " " <<"ycoor" << endl;
 
     cout<<"Enter number of points in the plane (>=3): ";
     cin>>N;
@@ -121,8 +132,11 @@ int main()
         cin>>x>>y;
         A[i].setX(x);
         A[i].setY(y);
+
+        outfile << x << " " << y << endl;
     }
 
+    outfile.close();
     JarvisMethod(A);
 
     return 0;
