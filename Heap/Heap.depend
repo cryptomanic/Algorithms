@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1456980379 source:/home/deepak/Desktop/Algorithms/Heap/main.cpp
+	<iostream>
+	<vector>
+	<array>
+

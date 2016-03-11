@@ -108,16 +108,42 @@ void printAll(vector<int> &A){
 
 int main()
 {
-    vector<int> A{1,2,3,9,7,5,2,5,6};
+    vector<int> A;
     // covert vector A to min heap
-    buildMinHeap(A);
-    // add elements to min heap
-    addElement(4,A);
-    addElement(10,A);
+    while(true) {
+        cout<<"1. Insert an Element\n";
+        cout<<"2. Delete an Element\n";
+        cout<<"3. Heap Sort\n";
+        cout<<"4. Exit\n";
+        cout<<"-------------------------\n";
 
-    // this is heap sort bro
-    for(int i = 0;i < 11;i++){
-        cout<<PopElement(A)<<" ";
+        int choice = 0;
+        int input = 0;
+        vector<int> B;
+
+        cin>>choice;
+        switch(choice) {
+            case 1: cout<<"Element to be added: ";
+                    cin>>input;
+                    addElement(input, A);
+                    break;
+
+            case 2: PopElement(A);
+                    break;
+
+            case 3: B = vector<int>(A);
+                    // this is heap sort bro
+                    cout<<"-------------------------\n";
+                    for(int i = 0;i < A.size();i++){
+                        cout<<PopElement(B)<<" ";
+                    }
+                    cout<<endl;
+                    break;
+
+            default: exit(0);
+        }
+        cout<<"-------------------------\n";
+
     }
 
     return 0;
